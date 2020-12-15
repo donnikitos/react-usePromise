@@ -15,9 +15,11 @@ function promiseWorker($promise, $resolveModule, $setter) {
 
 			Comp = Comp[k];
 		}
-		const rElem = React.createElement(Comp);
-		if (React.isValidElement(rElem))
-			Comp = rElem;
+		if (typeof Comp == 'function') {
+			const rElem = React.createElement(Comp);
+			if (React.isValidElement(rElem))
+				Comp = rElem;
+		}
 
 		$setter(Comp);
 	});
