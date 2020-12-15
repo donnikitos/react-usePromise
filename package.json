@@ -1,5 +1,5 @@
 {
-	"name": "promisestate",
+	"name": "react-promisestate",
 	"version": "1.0.0",
 	"description": "Use promisises and asynchronous loading with React.js",
 	"main": "index.js",
