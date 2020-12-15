@@ -6,7 +6,7 @@
 import React from 'react';
 
 
-function usePromiseState($default) {
+function usePromiseStateFN($default) {
 	const [state, setState] = React.useState($default);
 
 	return [
@@ -14,22 +14,21 @@ function usePromiseState($default) {
 		($promise, $param = 'default') => {
 			$promise.then(($r) => {
 				const Comp = ($r.default[$param] ?? $r.default);
-				setState(<Comp />);
+				setState(React.createElement(Comp));
 			});
 		}
 	];
 }
-export default usePromiseState;
-export const usePromise = usePromiseState;
-export const usePromiseState = usePromiseState;
+export default usePromiseStateFN;
+export const usePromiseState = usePromiseStateFN;
+export const usePromise = usePromiseStateFN;
 
-
-function updateState($stateSetter) {
+function updateStateFN($stateSetter) {
 	return ($promise, $param = 'default') => {
 		$promise.then(($r) => {
 			const Comp = ($r.default[$param] ?? $r.default);
-			$stateSetter(<Comp />);
+			$stateSetter(React.createElement(Comp));
 		});
 	};
 }
-export const updateState = updateState;
+export const updateState = updateStateFN;

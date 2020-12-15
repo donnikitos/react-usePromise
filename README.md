@@ -10,7 +10,7 @@ Install with [npm](https://www.npmjs.com/):
 
 ```bash
 # via npm
-npm install @n94/react-usepromise
+npm install --save-dev @donnikitos/react-usepromise
 ```
 
 ## Usage
@@ -22,8 +22,8 @@ The setter function may take up to 2 parameters: 1st - Promise; 2nd -
 
 ```js
 import React from 'react';
-// import usePromiseState from '@n94/react-usepromise';
-import { usePromise } from '@n94/react-usepromise';
+// import usePromiseState from '@donnikitos/react-usepromise';
+import { usePromise } from '@donnikitos/react-usepromise';
 
 
 // use in Component
@@ -46,7 +46,7 @@ Alternatively you can use the `updateState` function to update the state with a 
 
 ```js
 import React from 'react';
-import { updateState } from '@n94/react-usepromise';
+import { updateState } from '@donnikitos/react-usepromise';
 
 
 // use in Component

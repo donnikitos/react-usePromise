@@ -1,6 +1,6 @@
 {
-	"name": "n94-react-usepromise",
-	"version": "1.0.0",
+	"name": "@donnikitos/react-usepromise",
+	"version": "1.0.3",
 	"description": "Use promisises and asynchronous component loading hook for React.js",
 	"main": "index.js",
 	"scripts": {
