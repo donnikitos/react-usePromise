@@ -6,17 +6,28 @@
 import React from 'react';
 
 
+function promiseWorker($promise, $resolveModule, $setter) {
+	$promise.then(($r) => {
+		let Comp = $r;
+		for (const k of $resolveModule.split('.')) {
+			if (!Comp[k])
+				break;
+
+			Comp = Comp[k];
+		}
+		if (React.isValidElement(Comp))
+			Comp = React.createElement(Comp);
+
+		$setter(Comp);
+	});
+}
+
 function usePromiseStateFN($default) {
 	const [state, setState] = React.useState($default);
 
 	return [
 		state,
-		($promise, $param = 'default') => {
-			$promise.then(($r) => {
-				const Comp = ($r.default[$param] ?? $r.default);
-				setState(React.createElement(Comp));
-			});
-		}
+		($promise, $resolveModule = '') => promiseWorker($promise, $resolveModule, setState)
 	];
 }
 export default usePromiseStateFN;
@@ -24,11 +35,6 @@ export const usePromiseState = usePromiseStateFN;
 export const usePromise = usePromiseStateFN;
 
 function updateStateFN($stateSetter) {
-	return ($promise, $param = 'default') => {
-		$promise.then(($r) => {
-			const Comp = ($r.default[$param] ?? $r.default);
-			$stateSetter(React.createElement(Comp));
-		});
-	};
+	return ($promise, $param = 'default') => promiseWorker($promise, $resolveModule, $stateSetter);
 }
 export const updateState = updateStateFN;
