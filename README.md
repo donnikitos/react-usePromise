@@ -31,7 +31,27 @@ export default function Comp(props) {
 	const [display, setDisplay] = usePromise('Loading...');
 
 	React.useEffect(() => {
-		setDisplay(import('./link-to-file'));						// loads the default export from link-to-file
+		setDisplay(import('./link-to-file'), 'default');					// loads the default export from link-to-file
+	}, []);
+
+	return (<div>
+		{display}
+	</div>);
+};
+```
+
+```js
+import React from 'react';
+// import usePromiseState from '@donnikitos/react-usepromise';
+import { usePromise } from '@donnikitos/react-usepromise';
+
+
+// use in Component
+export default function Comp(props) {
+	const [display, setDisplay] = usePromise('Loading...');
+
+	React.useEffect(() => {
+		setDisplay(new Promise((resolve) => resolve('Hello World!')));					// loads the default export from link-to-file
 	}, []);
 
 	return (<div>
