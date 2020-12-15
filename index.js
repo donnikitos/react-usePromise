@@ -8,8 +8,8 @@ import React from 'react';
 
 function promiseWorker($promise, $resolveModule, $setter) {
 	$promise.then(($r) => {
-		let Comp = $r;
-		for (const k of $resolveModule.split('.')) {
+		let Comp = $r.default ?? $r;
+		for(const k of $resolveModule.split('.')) {
 			if (!Comp[k])
 				break;
 
@@ -35,6 +35,6 @@ export const usePromiseState = usePromiseStateFN;
 export const usePromise = usePromiseStateFN;
 
 function updateStateFN($stateSetter) {
-	return ($promise, $param = 'default') => promiseWorker($promise, $resolveModule, $stateSetter);
+	return ($promise, $resolveModule = '') => promiseWorker($promise, $resolveModule, $stateSetter);
 }
 export const updateState = updateStateFN;

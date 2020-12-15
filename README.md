@@ -31,7 +31,7 @@ export default function Comp(props) {
 	const [display, setDisplay] = usePromise('Loading...');
 
 	React.useEffect(() => {
-		setDisplay(import('./link-to-file'), 'default');					// loads the default export from link-to-file
+		setDisplay(import('./link-to-file'));					// loads the default export from link-to-file
 	}, []);
 
 	return (<div>
