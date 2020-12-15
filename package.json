@@ -1,5 +1,5 @@
 {
-	"name": "react-promisestate",
+	"name": "react-usepromise",
 	"version": "1.0.0",
 	"description": "Use promisises and asynchronous loading with React.js",
 	"main": "index.js",
@@ -13,8 +13,11 @@
 	"keywords": [
 		"React.js",
 		"useState",
+		"async",
 		"Promise",
-		"Async",
+		"usePromise",
+		"usePromiseState",
+		"hook",
 		"code",
 		"splitting",
 		"components",
