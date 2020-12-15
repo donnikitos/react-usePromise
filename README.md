@@ -10,22 +10,25 @@ Install with [npm](https://www.npmjs.com/):
 
 ```bash
 # via npm
-npm install promisestate
+npm install react-promisestate
 ```
 
 ## Usage
 
-The `classNames` function takes any number of arguments which can be a string or object.
-The argument `'foo'` is short for `{ foo: true }`. If the value associated with a given key is falsy, that key won't be included in the output.
+The `usePromiseState` function takes a string or component that should be displayed while the promise is not yeat resolved.
+It returns a variable and a setter function very much like in React.js.
+
+The setter function may take up to 2 parameters: 1st - Promise; 2nd -
 
 ```js
 import React from 'react';
-import usePromiseState from 'promisestate';
+// import usePromiseState from 'react-promisestate';
+import { usePromise } from 'react-promisestate';
 
 
 // use in Component
 export default function Comp(props) {
-	const [display, setDisplay] = usePromiseState('Loading...');
+	const [display, setDisplay] = usePromise('Loading...');
 
 	React.useEffect(() => {
 		setDisplay(import('./link-to-file'));						// loads the default export from link-to-file
@@ -43,7 +46,7 @@ Alternatively you can use the `updateState` function to update the state with a 
 
 ```js
 import React from 'react';
-import { updateState } from 'promisestate';
+import { updateState } from 'react-promisestate';
 
 
 // use in Component

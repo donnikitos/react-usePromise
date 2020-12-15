@@ -20,6 +20,7 @@ function usePromiseState($default) {
 	];
 }
 export default usePromiseState;
+export const usePromise = usePromiseState;
 export const usePromiseState = usePromiseState;
 
 
