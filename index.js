@@ -9,14 +9,15 @@ import React from 'react';
 function promiseWorker($promise, $resolveModule, $setter) {
 	$promise.then(($r) => {
 		let Comp = $r.default ?? $r;
-		for(const k of $resolveModule.split('.')) {
+		for (const k of $resolveModule.split('.')) {
 			if (!Comp[k])
 				break;
 
 			Comp = Comp[k];
 		}
-		if (React.isValidElement(Comp))
-			Comp = React.createElement(Comp);
+		const rElem = React.createElement(Comp);
+		if (React.isValidElement(rElem))
+			Comp = rElem;
 
 		$setter(Comp);
 	});
