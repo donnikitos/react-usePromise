@@ -1,3 +1,8 @@
+/*!
+	Copyright (c) 2020 Nikita 'donnikitos' Nitichevski.
+	Licensed under the MIT License (MIT), see
+	https://github.com/donnikitos/promiseState
+*/
 import React from 'react';
 
 

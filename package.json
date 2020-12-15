@@ -25,5 +25,8 @@
 	"bugs": {
 		"url": "https://github.com/donnikitos/promiseState/issues"
 	},
-	"homepage": "https://github.com/donnikitos/promiseState#readme"
+	"homepage": "https://github.com/donnikitos/promiseState#readme",
+	"devDependencies": {
+		"react": "^17.0.1"
+	}
 }
