@@ -1,7 +1,7 @@
 {
-	"name": "react-usepromise",
+	"name": "n94-react-usepromise",
 	"version": "1.0.0",
-	"description": "Use promisises and asynchronous loading with React.js",
+	"description": "Use promisises and asynchronous component loading hook for React.js",
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
