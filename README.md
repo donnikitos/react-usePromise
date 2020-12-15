@@ -1,8 +1,8 @@
 PromiseState
 ===========
 
-[![NPM version](https://badgen.net/npm/v/classnames)](https://www.npmjs.com/package/promisestate)
-[![License](https://badgen.net/npm/license/classnames)](https://www.npmjs.com/package/promisestate)
+[![NPM version](https://badgen.net/npm/v/@donnikitos/react-usepromise)](https://www.npmjs.com/package/@donnikitos/react-usepromise)
+[![License](https://badgen.net/npm/license/@donnikitos/react-usepromise)](https://www.npmjs.com/package/@donnikitos/react-usepromise)
 
 A very simple function to use Promises with React.js's states.
 
