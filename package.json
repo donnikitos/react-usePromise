@@ -1,6 +1,6 @@
 {
 	"name": "@donnikitos/react-usepromise",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "Use promisises and asynchronous component loading hook for React.js",
 	"main": "index.js",
 	"scripts": {
@@ -8,7 +8,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/donnikitos/promiseState.git"
+		"url": "git+https://github.com/donnikitos/react-usePromise.git"
 	},
 	"keywords": [
 		"React.js",
@@ -26,9 +26,9 @@
 	"author": "Nikita 'donnikitos' Nitichevski <me@donnikitos.com> (https://donnikitos.com)",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/donnikitos/promiseState/issues"
+		"url": "https://github.com/donnikitos/react-usePromise/issues"
 	},
-	"homepage": "https://github.com/donnikitos/promiseState#readme",
+	"homepage": "https://github.com/donnikitos/react-usePromise#readme",
 	"devDependencies": {
 		"react": "^17.0.1"
 	}
