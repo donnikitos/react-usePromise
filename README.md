@@ -1,4 +1,4 @@
-PromiseState
+usePromise
 ===========
 
 [![NPM version](https://badgen.net/npm/v/@donnikitos/react-usepromise)](https://www.npmjs.com/package/@donnikitos/react-usepromise)
