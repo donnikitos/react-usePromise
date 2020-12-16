@@ -18,7 +18,9 @@ npm install --save-dev @donnikitos/react-usepromise
 The `usePromiseState` function takes a string or component that should be displayed while the promise is not yeat resolved.
 It returns a variable and a setter function very much like in React.js.
 
-The setter function may take up to 2 parameters: 1st - Promise; 2nd -
+The setter function may take up to 2 parameters:
+* 1st - Promise
+* 2nd - Module Part to load (default is `default`)
 
 ```js
 import React from 'react';
@@ -86,4 +88,4 @@ export default function Comp(props) {
 
 ## License
 
-[MIT](LICENSE).
+[MIT](LICENSE) Copyright (c) 2020 Nikita 'donnikitos' Nitichevski.
